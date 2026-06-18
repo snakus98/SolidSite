@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-main: #020718;
+  --bg-secondary: #040c22;
+  --bg-card: rgba(7, 17, 44, 0.86);
+  --bg-card-hover: rgba(10, 24, 60, 0.94);
+
+  --text-primary: #f4f7ff;
+  --text-secondary: #a8b1c7;
+  --text-muted: #78839d;
+
+  --cyan: #13c8ff;
+  --blue: #2878ff;
+  --purple: #7146ff;
+  --magenta: #ad4cff;
+
+  --border-default: rgba(101, 131, 220, 0.27);
+  --border-cyan: rgba(19, 200, 255, 0.58);
+  --border-purple: rgba(113, 70, 255, 0.58);
+
+  --glow-cyan: rgba(19, 200, 255, 0.26);
+  --glow-blue: rgba(40, 120, 255, 0.28);
+  --glow-purple: rgba(113, 70, 255, 0.3);
+
+  --container-width: 1320px;
+  --radius-card: 12px;
+  --radius-large: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: Manrope, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  background-image: linear-gradient(rgba(19, 200, 255, 0.018) 1px, transparent 1px);
+  background-size: 100% 72px;
+}
+
+/* Ambient background — deep night with faint radial glows, never a white section */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    radial-gradient(900px 600px at 78% 8%, rgba(40, 120, 255, 0.1), transparent 60%),
+    radial-gradient(820px 560px at 12% 4%, rgba(19, 200, 255, 0.07), transparent 55%),
+    radial-gradient(1100px 800px at 50% 100%, rgba(113, 70, 255, 0.08), transparent 60%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: rgba(113, 70, 255, 0.4);
+  color: #fff;
+}
+
+/* Gradient text helpers */
+.text-grad-cyan {
+  background: linear-gradient(95deg, var(--cyan), var(--blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.text-grad-purple {
+  background: linear-gradient(95deg, var(--purple), var(--magenta));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.section-rule {
+  border-top: 1px solid var(--border-default);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
