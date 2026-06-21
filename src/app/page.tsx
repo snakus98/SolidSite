@@ -13,8 +13,10 @@ export default function HomePage() {
     <>
       <Header />
       <main>
-        <HeroSection />
-        <FrameworksStrip />
+        <div className="home-first-screen">
+          <HeroSection />
+          <FrameworksStrip />
+        </div>
         <ServicesSection />
         <BusinessOutcomesSection />
         <GlobalReachSection />

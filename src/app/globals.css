@@ -97,6 +97,154 @@ a {
   border-top: 1px solid var(--border-default);
 }
 
+.global-reach-section {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding-block: clamp(56px, 8svh, 96px);
+}
+
+.global-reach-container,
+.global-reach-layout {
+  width: 100%;
+}
+
+.global-reach-container {
+  max-width: 1520px;
+}
+
+.global-reach-map {
+  aspect-ratio: 16 / 9;
+  min-height: clamp(390px, 66svh, 720px);
+  box-shadow: 0 24px 90px rgba(0, 0, 0, 0.26);
+}
+
+.home-first-screen {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+.hero-illustration {
+  max-width: min(680px, 51vw);
+}
+
+@media (min-width: 768px) {
+  .home-first-screen {
+    height: 100vh;
+    height: 100svh;
+  }
+
+  .home-hero {
+    min-height: 0;
+  }
+
+  .hero-illustration {
+    max-width: min(680px, calc((100svh - 250px) * 1.33));
+  }
+}
+
+@media (max-width: 767px) {
+  .global-reach-section {
+    padding-block: 52px;
+  }
+
+  .global-reach-map {
+    min-height: clamp(250px, 42svh, 360px);
+  }
+
+  .home-first-screen {
+    min-height: 100vh;
+    min-height: 100svh;
+  }
+
+  .home-hero {
+    align-items: flex-end;
+  }
+
+  .frameworks-strip {
+    max-height: 28svh;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 767px) and (max-height: 720px) {
+  .home-hero {
+    align-items: center;
+    padding-top: 92px;
+    padding-bottom: 10px;
+  }
+
+  .home-hero h1 {
+    font-size: 28px;
+    line-height: 1.04;
+    margin-bottom: 10px;
+  }
+
+  .home-hero p {
+    line-height: 1.42;
+  }
+
+  .home-hero-actions {
+    margin-bottom: 0;
+  }
+
+  .home-trust-items {
+    display: none;
+  }
+
+  .frameworks-strip {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .frameworks-strip p {
+    margin-bottom: 8px;
+  }
+
+  .frameworks-strip img {
+    height: var(--framework-logo-height-compact);
+  }
+}
+
+@media (max-height: 760px) and (min-width: 768px) {
+  .global-reach-section {
+    padding-block: 48px;
+  }
+
+  .global-reach-map {
+    min-height: clamp(330px, 56svh, 540px);
+  }
+}
+
+@media (max-height: 760px) and (min-width: 768px) {
+  .home-hero {
+    padding-top: 96px;
+    padding-bottom: 14px;
+  }
+
+  .hero-illustration {
+    max-width: min(620px, calc((100svh - 224px) * 1.33));
+  }
+}
+
+@media (max-height: 680px) and (min-width: 768px) {
+  .home-hero h1 {
+    font-size: clamp(34px, 3.3vw, 44px);
+  }
+
+  .home-hero p {
+    line-height: 1.45;
+  }
+
+  .frameworks-strip {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

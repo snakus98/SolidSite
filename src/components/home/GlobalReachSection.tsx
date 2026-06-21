@@ -41,16 +41,16 @@ const REACH_ITEMS = [
 
 export default function GlobalReachSection() {
   return (
-    <section className="py-7 md:py-8 section-rule" aria-labelledby="reach-heading">
-      <Container>
-        <div className="flex flex-col md:flex-row items-center gap-7">
+    <section className="global-reach-section section-rule" aria-labelledby="reach-heading">
+      <Container className="global-reach-container">
+        <div className="global-reach-layout flex flex-col md:flex-row items-center gap-9 lg:gap-10">
           {/* Left content */}
-          <div className="flex-1 md:max-w-[44%]">
+          <div className="flex-1 md:max-w-[36%]">
             <SectionLabel>Global Perspective. Local Execution.</SectionLabel>
 
             <h2
               id="reach-heading"
-              className="text-[clamp(28px,3.2vw,42px)] font-extrabold leading-[1.05] tracking-tight mb-3"
+              className="text-[clamp(40px,5.2vw,72px)] font-extrabold leading-[1.02] mb-5"
             >
               <span className="text-[var(--text-primary)]">Global reach.</span>
               <br />
@@ -58,21 +58,21 @@ export default function GlobalReachSection() {
               <span className="text-[var(--text-primary)]">impact.</span>
             </h2>
 
-            <p className="text-[12.5px] text-[var(--text-secondary)] leading-relaxed mb-6 max-w-[440px]">
+            <p className="text-[15px] lg:text-[17px] text-[var(--text-secondary)] leading-relaxed mb-8 max-w-[560px]">
               We combine international expertise with on-the-ground understanding to deliver
               solutions that work in the real world.
             </p>
 
             {/* Points with vertical dividers */}
-            <div className="flex flex-col sm:flex-row mb-6 divide-y sm:divide-y-0 sm:divide-x divide-[var(--border-default)]">
+            <div className="flex flex-col sm:flex-row mb-8 divide-y sm:divide-y-0 sm:divide-x divide-[var(--border-default)]">
               {REACH_ITEMS.map(({ title, description, icon }) => (
-                <div key={title} className="flex items-start gap-2.5 py-3 sm:py-0 sm:px-3.5 first:sm:pl-0 last:sm:pr-0">
+                <div key={title} className="flex items-start gap-3 py-4 sm:py-0 sm:px-5 first:sm:pl-0 last:sm:pr-0">
                   <div className="shrink-0 mt-0.5">{icon}</div>
                   <div>
-                    <h3 className="text-[12px] font-bold text-[var(--text-primary)] mb-1 leading-tight">
+                    <h3 className="text-[14px] font-bold text-[var(--text-primary)] mb-1.5 leading-tight">
                       {title}
                     </h3>
-                    <p className="text-[10px] leading-relaxed text-[var(--text-muted)]">{description}</p>
+                    <p className="text-[12px] leading-relaxed text-[var(--text-muted)]">{description}</p>
                   </div>
                 </div>
               ))}
@@ -84,13 +84,13 @@ export default function GlobalReachSection() {
           </div>
 
           {/* Right map */}
-          <div className="flex-1 md:max-w-[56%] w-full border border-[var(--border-default)] rounded-[12px] overflow-hidden">
+          <div className="global-reach-map flex-1 md:max-w-[64%] w-full border border-[var(--border-default)] rounded-[12px] overflow-hidden">
             <Image
               src="/images/global-reach-map.png"
               alt="Dotted map of Europe with glowing connections converging on Tunisia — Serving Europe and beyond"
               width={1672}
               height={941}
-              className="w-full h-auto"
+              className="w-full h-full object-cover"
             />
           </div>
         </div>

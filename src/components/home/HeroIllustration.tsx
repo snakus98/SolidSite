@@ -23,7 +23,7 @@ export default function HeroIllustration() {
 
   return (
     <div
-      className="relative w-full max-w-[680px]"
+      className="hero-illustration relative w-full max-w-[680px]"
       style={{ animation: "fade-up 0.8s 0.15s ease both" }}
     >
       <Image

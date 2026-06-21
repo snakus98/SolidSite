@@ -77,10 +77,13 @@ export default function Header() {
         {/* Desktop nav */}
         <nav ref={navRef} className="hidden lg:flex items-center gap-8" aria-label="Main navigation">
           {NAV_LINKS.map((item) => {
-            const active = isActive(item.href);
+            const active =
+              isActive(item.href) ||
+              ("children" in item && item.children.some((child) => isActive(child.href)));
 
             if ("children" in item) {
               const isOpen = openMenu === item.href;
+              const dropdownWidth = item.children.length <= 2 ? "w-max min-w-[136px]" : "w-[320px]";
               return (
                 <div key={item.href} className="relative group">
                   <button
@@ -116,7 +119,7 @@ export default function Header() {
                   {/* Dropdown panel */}
                   <div
                     className={`
-                      absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[320px]
+                      absolute top-full left-1/2 -translate-x-1/2 pt-3 ${dropdownWidth}
                       transition-all duration-200
                       group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
                       ${isOpen
@@ -226,7 +229,9 @@ export default function Header() {
         `}
       >
         {NAV_LINKS.map((item) => {
-          const active = isActive(item.href);
+          const active =
+            isActive(item.href) ||
+            ("children" in item && item.children.some((child) => isActive(child.href)));
 
           if ("children" in item) {
             return (

@@ -29,7 +29,14 @@ export const SITE = {
 
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
+  {
+    label: "Company",
+    href: "/company",
+    children: [
+      { label: "About Us", href: "/about" },
+      { label: "Careers", href: "/careers" },
+    ],
+  },
   {
     label: "Industries",
     href: "/industries",
@@ -39,4 +46,6 @@ export const NAV_LINKS = [
       { label: "Security & Compliance for Healthcare Providers", href: "/industries/healthcare" },
     ],
   },
+  { label: "Our projects", href: "/our-projects" },
+  { label: "GRC solution", href: "/grc-solution" },
 ] as const;

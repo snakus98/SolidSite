@@ -13,7 +13,7 @@ const TRUST_ITEMS = [
 export default function HeroSection() {
   return (
     <section
-      className="relative pt-[120px] pb-8 md:pt-[124px] md:pb-9 overflow-hidden"
+      className="home-hero relative flex flex-1 items-center pt-[104px] pb-4 md:pt-[108px] md:pb-5 overflow-hidden"
       aria-labelledby="hero-heading"
     >
       {/* Background radial glow centered on shield */}
@@ -26,18 +26,18 @@ export default function HeroSection() {
         }}
       />
 
-      <Container className="flex flex-col md:flex-row items-stretch md:items-center gap-7 md:gap-2">
+      <Container className="flex flex-col md:flex-row items-stretch md:items-center gap-4 md:gap-2">
         {/* ── Left content ── */}
         <div className="flex-1 min-w-0 md:max-w-[47%] animate-fade-up">
           {/* Eyebrow */}
-          <p className="text-[10px] sm:text-[11px] tracking-[0.2em] font-bold text-[var(--cyan)] mb-4 uppercase">
+          <p className="text-[10px] sm:text-[11px] tracking-[0.2em] font-bold text-[var(--cyan)] mb-3 md:mb-4 uppercase">
             Cybersecurity. Compliance. Trust.
           </p>
 
           {/* Headline */}
           <h1
             id="hero-heading"
-            className="text-[clamp(34px,4vw,51px)] font-extrabold leading-[1.1] tracking-tight text-[var(--text-primary)] mb-4"
+            className="text-[clamp(31px,4vw,51px)] font-extrabold leading-[1.08] text-[var(--text-primary)] mb-3 md:mb-4"
           >
             We help organizations{" "}
             <span className="text-grad-cyan">modernize</span>
@@ -53,13 +53,13 @@ export default function HeroSection() {
           </h1>
 
           {/* Description */}
-          <p className="text-[13px] sm:text-[14px] text-[var(--text-secondary)] leading-relaxed mb-5 max-w-[510px]">
+          <p className="text-[13px] sm:text-[14px] text-[var(--text-secondary)] leading-relaxed mb-4 md:mb-5 max-w-[510px]">
             Pragmatic solutions, proven frameworks, and expert guidance to build resilient,
             compliant, and future-ready organizations.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-wrap gap-3 mb-5">
+          <div className="home-hero-actions flex flex-wrap gap-3 mb-4 md:mb-5">
             <Link
               href="/contact"
               className="
@@ -95,7 +95,7 @@ export default function HeroSection() {
           </div>
 
           {/* Trust items */}
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-2 lg:gap-x-3.5">
+          <div className="home-trust-items flex flex-wrap items-center gap-x-3 gap-y-2 lg:gap-x-3.5">
             {TRUST_ITEMS.map(({ icon, label }) => (
               <div key={label} className="flex items-center gap-1.5 shrink-0">
                 {icon}
@@ -106,7 +106,7 @@ export default function HeroSection() {
         </div>
 
         {/* ── Right illustration ── */}
-        <div className="flex-1 flex justify-center items-center w-full md:max-w-[46%] md:scale-[1.08] mix-blend-lighten">
+        <div className="home-hero-visual flex-1 hidden md:flex justify-center items-center w-full md:max-w-[46%] md:scale-[1.08] mix-blend-lighten">
           <HeroIllustration />
         </div>
       </Container>
