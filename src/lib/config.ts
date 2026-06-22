@@ -44,6 +44,8 @@ export const NAV_LINKS = [
       { label: "Manufacturing & Industrial IoT (IIoT)", href: "/industries/manufacturing-iiot" },
       { label: "Security & Privacy for NGOs", href: "/industries/ngos" },
       { label: "Security & Compliance for Healthcare Providers", href: "/industries/healthcare" },
+      { label: "IT", href: "/industries/it" },
+      { label: "Banking & Financial Services", href: "/industries/banking" },
     ],
   },
   { label: "Our projects", href: "/our-projects" },
