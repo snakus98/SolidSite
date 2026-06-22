@@ -39,33 +39,43 @@ export const SERVICES = [
 export const OUTCOMES = [
   {
     id: "risk",
+    number: "01",
     title: "Reduce Risk",
     description: "Identify, prioritize, and mitigate risks proactively.",
     icon: "risk",
+    accent: "cyan",
   },
   {
     id: "compliance",
+    number: "02",
     title: "Ensure Compliance",
     description: "Meet regulatory requirements and audit with confidence.",
     icon: "compliance",
+    accent: "purple",
   },
   {
     id: "performance",
+    number: "03",
     title: "Improve Performance",
     description: "Optimize operations and security for better efficiency.",
     icon: "performance",
+    accent: "cyan",
   },
   {
     id: "resilience",
+    number: "04",
     title: "Build Resilience",
     description: "Respond faster and recover stronger from disruptions.",
     icon: "resilience",
+    accent: "purple",
   },
   {
     id: "growth",
+    number: "05",
     title: "Drive Growth",
     description: "Enable innovation and scale with trust and assurance.",
     icon: "growth",
+    accent: "blue",
   },
 ] as const;
 

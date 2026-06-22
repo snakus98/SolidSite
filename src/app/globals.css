@@ -97,6 +97,42 @@ a {
   border-top: 1px solid var(--border-default);
 }
 
+/* ── Measurable Business Outcomes — radial orbit ── */
+.outcome-orbit-spin {
+  transform-origin: 50% 50%;
+  animation: outcome-spin 48s linear infinite;
+}
+.outcome-orbit-spin-rev {
+  transform-origin: 50% 50%;
+  animation: outcome-spin 64s linear infinite reverse;
+}
+@keyframes outcome-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.outcome-core-pulse {
+  transform-origin: 50% 50%;
+  animation: outcome-pulse 4.5s ease-in-out infinite;
+}
+@keyframes outcome-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+}
+.outcome-card {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.outcome-card:hover {
+  transform: translateY(-4px);
+}
+
 .global-reach-section {
   display: flex;
   align-items: center;

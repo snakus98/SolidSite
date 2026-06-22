@@ -84,13 +84,13 @@ export default function GlobalReachSection() {
           </div>
 
           {/* Right map */}
-          <div className="global-reach-map flex-1 md:max-w-[64%] w-full border border-[var(--border-default)] rounded-[12px] overflow-hidden">
+          <div className="global-reach-map flex-1 md:max-w-[64%] w-full border border-[var(--border-default)] rounded-[12px] overflow-hidden bg-[var(--bg-secondary)]">
             <Image
               src="/images/global-reach-map.png"
               alt="Dotted map of Europe with glowing connections converging on Tunisia — Serving Europe and beyond"
               width={1672}
               height={941}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
           </div>
         </div>
