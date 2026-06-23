@@ -53,13 +53,19 @@ export default function Header() {
     <header
       className={`
         fixed top-0 left-0 right-0 z-50 h-[88px]
-        border-b border-[var(--border-default)]
+        border-b border-white/10
+        backdrop-blur-2xl backdrop-saturate-150
         transition-all duration-300
-        ${scrolled
-          ? "bg-[rgba(2,7,24,0.94)] backdrop-blur-md"
-          : "bg-[rgba(2,7,24,0.78)] backdrop-blur-sm"
-        }
+        ${scrolled ? "bg-[rgba(8,21,40,0.62)]" : "bg-[rgba(8,21,40,0.40)]"}
       `}
+      style={{
+        backgroundImage:
+          "linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.015) 32%, rgba(8,21,40,0.10) 100%)",
+        boxShadow: scrolled
+          ? "0 10px 34px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.16), inset 0 -1px 0 rgba(19,200,255,0.10)"
+          : "0 6px 24px rgba(0,0,0,0.30), inset 0 1px 0 rgba(255,255,255,0.12)",
+        WebkitBackdropFilter: "blur(24px) saturate(150%)",
+      }}
     >
       <Container className="flex items-center justify-between h-full">
         {/* Logo */}
