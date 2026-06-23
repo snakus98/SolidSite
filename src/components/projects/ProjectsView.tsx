@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Container from "@/components/ui/Container";
+import ProjectsHeroVisual from "@/components/projects/ProjectsHeroVisual";
 import { FileText, ArrowRight } from "lucide-react";
 
 const CATEGORIES = [
@@ -132,17 +133,7 @@ export default function ProjectsView() {
 
           {/* Right illustration */}
           <div className="flex-1 md:max-w-[52%] w-full flex justify-center">
-            <div className="relative w-full max-w-[620px] mix-blend-lighten">
-              <Image
-                src="/images/project-taz7.png"
-                alt="Projects overview illustration with security, compliance, cloud, and performance panels around a protected folder"
-                width={1448}
-                height={1086}
-                className="w-full h-auto"
-                priority
-                unoptimized
-              />
-            </div>
+            <ProjectsHeroVisual />
           </div>
         </Container>
       </section>

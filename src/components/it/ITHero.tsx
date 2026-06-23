@@ -1,7 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
 import { CalendarDays } from "lucide-react";
 import Container from "@/components/ui/Container";
+import OrbitHeroVisual from "@/components/industries/OrbitHeroVisual";
 
 export default function ITHero() {
   return (
@@ -54,17 +54,10 @@ export default function ITHero() {
 
         {/* Right visual */}
         <div className="flex-1 md:max-w-[56%] w-full flex justify-center">
-          <div className="relative w-full max-w-[640px] mix-blend-lighten">
-            <Image
-              src="/images/it-hero.png"
-              alt="IT operating model connecting cloud, endpoints, identity, networks, support, monitoring, data, and continuity around a core IT platform"
-              width={1254}
-              height={1254}
-              className="w-full h-auto"
-              priority
-              unoptimized
-            />
-          </div>
+          <OrbitHeroVisual
+            src="/images/it-hero.png"
+            alt="IT operating model connecting cloud, endpoints, identity, networks, support, monitoring, data, and continuity around a core IT platform"
+          />
         </div>
       </Container>
     </section>
