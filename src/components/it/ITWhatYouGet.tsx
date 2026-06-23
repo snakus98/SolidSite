@@ -87,29 +87,35 @@ function PanelLabel({ children, color = CYAN }: { children: React.ReactNode; col
 const CORE = [
   { Icon: IconCloudOpt, accent: CYAN, title: "Infrastructure & cloud optimisation", desc: "Optimise cloud spend, right-size resources, and improve performance, availability, and scalability." },
   { Icon: IconIdentity, accent: PURPLE, title: "Identity, endpoint & access management", desc: "Strengthen identity controls, manage endpoints securely, and simplify access for users." },
-  { Icon: IconShield, accent: CYAN, title: "Monitoring, continuity & resilience", desc: "Build visibility, detect issues early, and ensure continuity through backups and disaster readiness." },
-  { Icon: IconSupport, accent: PURPLE, title: "Support workflows & operational reporting", desc: "Streamline support processes and deliver clear reporting for better decisions." },
+  { Icon: IconShield, accent: CYAN, title: "Monitoring, continuity & resilience", desc: "Detect issues earlier, improve backup readiness, and strengthen disaster recovery practices." },
+  { Icon: IconSupport, accent: PURPLE, title: "Support workflows & operational reporting", desc: "Structure support processes and deliver clear reporting for better decisions." },
 ];
 
 const DELIVERY = [
-  { title: "Discover", weeks: "Weeks 1–2", desc: "Assess environment, tools, users, and business objectives." },
-  { title: "Design", weeks: "Weeks 3–4", desc: "Define target architecture, processes, and operating model." },
-  { title: "Implement", weeks: "Weeks 5–10", desc: "Deploy solutions, integrate systems, and migrate with minimal risk." },
-  { title: "Operate", weeks: "Weeks 11–14", desc: "Optimise performance, ensure resilience, and drive continuous improvement." },
+  { title: "Discover", weeks: "Weeks 1–2", desc: "Review environments, tools, users, cloud resources, risks, business priorities, and operational objectives." },
+  { title: "Design", weeks: "Weeks 3–4", desc: "Define the target architecture, governance model, service workflows, security controls, and roadmap." },
+  { title: "Implement", weeks: "Weeks 5–10", desc: "Deploy solutions, integrate systems, configure environments, and migrate with minimal operational risk." },
+  { title: "Operate", weeks: "Weeks 11–14", desc: "Optimise performance, stabilise operations, document processes, train teams, and ensure continuity." },
 ];
 
 const DELIVERABLES = [
   { t: "IT operating model", c: CYAN },
-  { t: "Support workflow design", c: PURPLE },
-  { t: "Asset & service inventory", c: CYAN },
-  { t: "Monitoring & continuity pack", c: PURPLE },
+  { t: "Asset & service inventory", c: PURPLE },
   { t: "Cloud optimisation roadmap", c: CYAN },
+  { t: "Microsoft 365 governance baseline", c: PURPLE },
+  { t: "Identity & access review", c: CYAN },
+  { t: "Endpoint management setup", c: PURPLE },
+  { t: "Support workflow design", c: CYAN },
+  { t: "Monitoring & continuity pack", c: PURPLE },
+  { t: "Backup & disaster recovery readiness review", c: CYAN },
   { t: "Executive dashboard", c: PURPLE },
+  { t: "Security awareness recommendations", c: CYAN },
+  { t: "Compliance readiness roadmap", c: PURPLE },
 ];
 
 const ENABLEMENT = [
-  { n: 5, Icon: IconGear, accent: PURPLE, title: "Automation & standardisation", desc: "Automate repetitive tasks, enforce standards, and reduce manual effort." },
-  { n: 6, Icon: IconChart, accent: CYAN, title: "Operational reporting & training", desc: "Provide dashboards, documentation, and training for your teams." },
+  { n: 5, Icon: IconGear, accent: PURPLE, title: "Automation & standardisation", desc: "Automate repetitive tasks, enforce standards, reduce manual effort, and improve operational consistency." },
+  { n: 6, Icon: IconChart, accent: CYAN, title: "Operational reporting & training", desc: "Provide dashboards, documentation, governance guidelines, and practical training for your teams." },
 ];
 
 const panelCls =
@@ -126,7 +132,7 @@ export default function ITWhatYouGet() {
           </h2>
           <p className="text-[14px] md:text-[15px] text-[var(--text-secondary)] leading-relaxed max-w-[560px]">
             Outcomes, delivery workstreams, and the operating layer that turns IT into a practical,
-            scalable management system.
+            secure, and scalable management system.
           </p>
         </div>
 

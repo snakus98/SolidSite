@@ -44,9 +44,9 @@ function IconDocCheck({ c }: { c: string }) {
 }
 
 const STEPS = [
-  { Icon: IconPeople, accent: CYAN, text: "Share your environment, priorities, and constraints." },
-  { Icon: IconRoadmap, accent: PURPLE, text: "We map a phased roadmap covering cloud, endpoints, support, and continuity." },
-  { Icon: IconDocCheck, accent: CYAN, text: "Leave with a costed proposal and practical next steps." },
+  { Icon: IconPeople, accent: CYAN, text: "Share your environment, priorities, constraints, and current IT challenges." },
+  { Icon: IconRoadmap, accent: PURPLE, text: "We map a phased roadmap covering cloud, endpoints, identity, security, support, and continuity." },
+  { Icon: IconDocCheck, accent: CYAN, text: "You receive a practical proposal with clear actions, priorities, and next steps." },
 ];
 
 const inputCls =
@@ -66,8 +66,8 @@ export default function ITCTA() {
                   id="it-cta-heading"
                   className="text-[clamp(28px,3.4vw,40px)] font-extrabold leading-[1.08] tracking-tight text-[var(--text-primary)] mb-3"
                 >
-                  Plan your IT roadmap with specialists who connect infrastructure, resilience, and
-                  business performance.
+                  Plan your IT roadmap with specialists who connect infrastructure, resilience,
+                  security, and business performance.
                 </h2>
                 <p className="text-[15px] md:text-[16px] font-semibold text-grad-purple mb-8">
                   Talk to us about your requirements
@@ -100,7 +100,7 @@ export default function ITCTA() {
               {/* ── Right: form ── */}
               <div className="lg:border-l lg:border-[var(--border-default)] lg:pl-12">
                 <h3 className="text-[22px] md:text-[28px] font-bold text-center text-[var(--text-primary)] mb-8">
-                  Book a 30-minute session
+                  Book a 30-minute IT consultation
                 </h3>
 
                 <form className="space-y-5">

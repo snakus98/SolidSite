@@ -29,13 +29,11 @@ function IconCloud({ c }: { c: string }) {
     </svg>
   );
 }
-function IconEndpoint({ c }: { c: string }) {
+function IconShield({ c }: { c: string }) {
   return (
     <svg viewBox="0 0 48 48" className="w-full h-full">
-      <rect x="6" y="10" width="24" height="17" rx="2" {...S(c)} />
-      <path d="M12 33 H24" {...S(c)} strokeWidth={1.8} />
-      <rect x="32" y="18" width="10" height="20" rx="2" {...S(c)} strokeWidth={1.9} />
-      <path d="M37 34 h0.01" {...S(c)} />
+      <path d="M24 6 L38 11 V23 C38 33 24 42 24 42 C24 42 10 33 10 23 V11 Z" {...S(c)} />
+      <path d="M17 24 l5 5 l9 -11" {...S(c)} />
     </svg>
   );
 }
@@ -63,67 +61,67 @@ const PAINPOINTS: Painpoint[] = [
     accent: "#19c8ff",
     title: "Fragmented IT environments slow decision-making",
     intro:
-      "Tools, users, assets, support requests, and cloud resources are often managed in silos, creating operational friction.",
+      "Tools, users, assets, support requests, cloud resources, and security controls are often managed in silos, creating operational friction and limited visibility.",
     reality: [
-      "Limited visibility across assets, identities, and services.",
-      "Reactive support and inconsistent operational processes.",
-      "Cloud, endpoint, and security decisions are not aligned.",
+      "Limited visibility across assets, identities, services, and cloud resources.",
+      "Reactive support processes and inconsistent operational ownership.",
+      "Cloud, endpoint, network, and security decisions are not fully aligned.",
     ],
     help: [
-      "Create a unified view of infrastructure, users, and dependencies.",
-      "Standardise workflows, ownership, and operational controls.",
-      "Introduce monitoring, optimisation, and resilience practices.",
+      "Create a unified view of infrastructure, users, devices, services, and dependencies.",
+      "Standardise workflows, ownership, support models, and operational controls.",
+      "Introduce monitoring, optimisation, resilience, and security-by-design practices.",
     ],
   },
   {
     Icon: IconCloud,
     accent: "#9b6bff",
-    title: "Cloud and infrastructure costs become difficult to control",
+    title: "Cloud and Microsoft 365 environments are under-optimised",
     intro:
-      "As environments grow, cloud services, licenses, servers, endpoints, and tools can quickly become expensive and hard to govern.",
+      "Many organisations use cloud platforms and Microsoft 365 every day, but without a clear architecture, governance model, licensing strategy, and security baseline.",
     reality: [
-      "Cloud resources are often underused, oversized, or poorly monitored.",
-      "Teams lack clear ownership of infrastructure spending.",
-      "Cost optimisation is disconnected from performance and security needs.",
+      "Cloud costs and software licenses are difficult to control.",
+      "Microsoft 365, Teams, SharePoint, Intune, and identity services are not fully structured.",
+      "Collaboration grows faster than governance, security, and data control.",
     ],
     help: [
-      "Review infrastructure, cloud usage, licenses, and service consumption.",
-      "Identify optimisation opportunities without weakening performance.",
-      "Build a practical roadmap for cost control, scalability, and resilience.",
+      "Optimise cloud consumption, licensing, access, and collaboration environments.",
+      "Design secure Microsoft 365 and endpoint management setups.",
+      "Build a clear roadmap for cloud maturity, cost control, and operational efficiency.",
     ],
   },
   {
-    Icon: IconEndpoint,
+    Icon: IconShield,
     accent: "#2878ff",
-    title: "Endpoint and identity risks increase operational exposure",
+    title: "Security and compliance are treated too late",
     intro:
-      "Modern IT environments depend on distributed users, devices, applications, and access rights that must remain secure and easy to manage.",
+      "Security often becomes a reaction after incidents, audits, client requirements, or compliance pressure — instead of being embedded into daily IT operations.",
     reality: [
-      "User access is difficult to review consistently.",
-      "Endpoints are exposed to misconfiguration, outdated controls, or weak monitoring.",
-      "Remote work increases pressure on identity, access, and device governance.",
+      "Security controls are not consistently mapped to business risks.",
+      "ISO 27001, GDPR, NIST, or client security requirements are difficult to translate into practical actions.",
+      "Teams lack clear routines for access control, vulnerability management, awareness, and incident response.",
     ],
     help: [
-      "Strengthen identity, endpoint, and access management controls.",
-      "Improve device visibility, policy enforcement, and user access reviews.",
-      "Align endpoint security with operational support and business continuity.",
+      "Embed security-by-design into infrastructure, cloud, endpoint, and software decisions.",
+      "Support ISO 27001 readiness, GDPR alignment, risk assessments, and security awareness.",
+      "Strengthen vulnerability management, access control, and incident response readiness.",
     ],
   },
   {
     Icon: IconMonitor,
     accent: "#19d3c5",
-    title: "Support and monitoring lack structure",
+    title: "IT operations lack continuity and measurable structure",
     intro:
-      "IT teams need to detect issues early, resolve requests faster, and report clearly to management, but operations are often handled manually.",
+      "Without a clear operating model, IT teams spend too much time reacting to requests instead of improving resilience, service quality, and business enablement.",
     reality: [
-      "Support requests are not always prioritised or tracked consistently.",
-      "Monitoring alerts are fragmented across tools and systems.",
-      "Management lacks clear reporting on service quality, incidents, and improvement actions.",
+      "Support workflows are informal, inconsistent, or difficult to measure.",
+      "Monitoring, backups, disaster recovery, and continuity plans are incomplete.",
+      "Management lacks clear indicators to prioritise investments, risks, and improvement actions.",
     ],
     help: [
-      "Structure support workflows, escalation rules, and service ownership.",
-      "Implement monitoring and reporting for infrastructure, endpoints, and cloud services.",
-      "Provide dashboards for incidents, performance, continuity, and operational improvement.",
+      "Design practical IT operating models, support workflows, and reporting structures.",
+      "Implement monitoring, backup, continuity, and resilience practices.",
+      "Provide executive dashboards and roadmaps for better IT decision-making.",
     ],
   },
 ];
@@ -160,12 +158,12 @@ export default function ITPainpoints() {
               id="it-painpoints-heading"
               className="text-[clamp(30px,3.4vw,46px)] font-extrabold leading-[1.05] tracking-tight text-[var(--text-primary)] mb-5"
             >
-              Key painpoints
-              <br className="hidden sm:block" /> we solve
+              Key IT challenges
+              <br className="hidden sm:block" /> we help you solve
             </h2>
             <p className="text-[14px] text-[var(--text-secondary)] leading-relaxed mb-6 max-w-[400px]">
-              A focused sequence of recurring IT challenges — and how our approach addresses them with
-              structure, visibility, and measurable progress.
+              A focused view of the recurring IT challenges that slow down organisations — and how
+              Punic Systems turns them into structured, secure, and measurable improvement paths.
             </p>
             <Link
               href="/our-projects"

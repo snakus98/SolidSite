@@ -19,20 +19,20 @@ export default function ITHero() {
         {/* Left content */}
         <div className="flex-1 md:max-w-[44%] animate-fade-up">
           <p className="text-[11px] sm:text-[12px] tracking-[0.22em] font-bold text-[var(--cyan)] mb-5 uppercase">
-            IT Infrastructure • Cloud • Operations
+            IT Infrastructure • Cloud • Security • Operations
           </p>
 
           <h1
             id="it-hero-heading"
             className="text-[clamp(30px,3.9vw,50px)] font-extrabold leading-[1.05] tracking-tight text-[var(--text-primary)] mb-5"
           >
-            IT solutions for resilient infrastructure, modern operations, and secure growth.
+            IT solutions for secure infrastructure, resilient operations, and scalable growth.
           </h1>
 
           <p className="text-[14px] sm:text-[15px] text-[var(--text-secondary)] leading-relaxed mb-8 max-w-[560px]">
-            We help organisations modernise core IT, strengthen resilience, optimise cloud and
-            endpoint environments, and align infrastructure decisions with business continuity,
-            security, and performance goals.
+            We help organisations modernise their IT foundations, secure their digital environments,
+            optimise cloud and endpoint operations, and align infrastructure decisions with business
+            continuity, security, and performance goals.
           </p>
 
           <Link
