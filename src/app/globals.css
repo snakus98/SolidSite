@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --bg-main: #020718;
+  --bg-main: #081528;
   --bg-secondary: #040c22;
   --bg-card: rgba(7, 17, 44, 0.86);
   --bg-card-hover: rgba(10, 24, 60, 0.94);
